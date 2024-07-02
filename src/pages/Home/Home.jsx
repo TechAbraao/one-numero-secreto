@@ -2,44 +2,44 @@ import React from "react";
 import "./homeStyle.css";
 import { useState } from "react";
 import IconsNumbers from "../../components/IconsNumbers/IconsNumbers";
+import ModalPerdeu from "../../components/ModalPerdeu/ModalPerdeu";
+import ModalVenceu from "../../components/ModalGanhou/ModalVenceu";
 
-export default function Home({}) {
+export default function Home() {
    const [iniciar, setIniciar] = useState(false);
+   const [perdeu, setPerdeu] = useState(false);
+   const [venceu, setVenceu] = useState(false);
    const [numeroAleatorio, setNumeroAleatorio] = useState(0);
-   const [msg, setMsg] = useState("");
+   const [msg, setMsg] = useState();
+   // Define a quantidade de vezes na partida.
+   const [qntd, setQntd] = useState(14);
 
    // Lógica magnífica para o refinamento da geração de objetos em JS.
    let dataNumbers = [];
    for (let i = 1; i <= 75; i++) {
       dataNumbers.push({ numero: `${i}`, index: i });
-      console.log(`O index é: ${i}`);
    }
-   // Principais funções
-
    // Função: selecionar index específico.
    const handleIndex = (index) => {
       index++;
       console.log("Clicou no Index: " + index);
+
       if (index == numeroAleatorio) {
-         console.log("Parabéns, você venceu. Orgulhe-se.");
-         setMsg("Parabéns, você venceu. Orgulhe-se.");
+         setVenceu(true);
+      } else if (qntd == 0) {
+         setPerdeu(true);
       } else {
-         console.log("Infelizmente não foi dessa vez.");
-         setMsg("Infelizmente não foi dessa vez.");
+         setQntd(qntd - 1);
+         setMsg(`Você têm apenas ${qntd} tentativas.`);
       }
    };
    // Função: geradora de número aleatório
    const geradorNumeroAleatorio = () => {
-      if (iniciar) {
-         console.log("Número gerado anteriormente inválidado"); // Notifica que o número gerado foi invalidado.
-      } else {
-         let y = parseInt(Math.random() * 75 + 1);
-         setNumeroAleatorio(y);
-         console.log("Número secreto é: " + y + ", correto?"); // Verificar qual é o número aleatório gerado.
-         // O número gerado a partir dessa função é retornado, como é mostrado abaixo.
-      }
+      let y = parseInt(Math.random() * 75 + 1);
+      setNumeroAleatorio(y);
+      console.log("Número secreto é: " + y + ", correto?"); // Verificar qual é o número aleatório gerado.
+      // O número gerado a partir dessa função é retornado, como é mostrado abaixo.
    };
-   //
 
    //
    return (
@@ -51,6 +51,10 @@ export default function Home({}) {
                   onClick={() => {
                      setIniciar(!iniciar); // Inicializa a partida.
                      geradorNumeroAleatorio(); // Invoca a função de inicialização com a lógica de execução.
+                     if (iniciar == false) {
+                        setQntd(14);
+                        setMsg("Você têm apenas 15 tentativas.");
+                     }
                   }}
                >
                   {iniciar == false ? "Iniciar" : "Voltar"}
@@ -59,7 +63,7 @@ export default function Home({}) {
                {iniciar && (
                   <>
                      <div className="w-full">
-                        <ul className="flex flex-wrap items-center justify-center mt-1">
+                        <ul className="flex flex-wrap items-center justify-center mt-1 cursor-pointer">
                            {dataNumbers.map(
                               (numeroSelecionado, indexSelecionado) => (
                                  <li
@@ -78,13 +82,31 @@ export default function Home({}) {
                            )}
                         </ul>
                      </div>
-                     <div className="bg-white w-96 h-10 mt-10 flex justify-center items-center rounded-lg">
-                        <h1 className="text-2xl">{`Número aleatório é: ${numeroAleatorio}`}</h1>
+                     <div className="bg-white w-2/3 h-14 mt-7 flex justify-center items-center rounded-lg">
+                        <h1 className="text-2xl">{msg}</h1>
                      </div>
-                     <h1>Resultado: {msg}</h1>
+                     <h1 className="text-2xl">{`Número aleatório é: ${numeroAleatorio}`}</h1>
                   </>
                )}
             </div>
+            {perdeu && (
+               <ModalPerdeu
+                  setIniciar={setIniciar}
+                  setPerdeu={setPerdeu}
+                  setQntd={setQntd}
+                  setMsg={setMsg}
+                  geradorNumeroAleatorio={geradorNumeroAleatorio}
+               />
+            )}
+            {venceu && (
+               <ModalVenceu
+                  setIniciar={setIniciar}
+                  setVenceu={setVenceu}
+                  setQntd={setQntd}
+                  setMsg={setMsg}
+                  geradorNumeroAleatorio={geradorNumeroAleatorio}
+               />
+            )}
          </section>
       </>
    );
