@@ -8,7 +8,7 @@
   <h2>Informações</h2>
 <ul>
   <li>A <a href="https://www.oracle.com/br/education/oracle-next-education/">ONE (Oracle Next Education)</a> é um programa de educação e empregabilidade com o objetivo social de capacitar pessoas em tecnologia e conectá-las com o mercado de trabalho por meio de empresas parcerias. Além disso, a ONE é uma parceria entre Alura + Oracle.</li>
-  <li>Este projeto faz parte da formação <b>"Iniciante em Programação T7 - ONE"</b>, mais especificamente do curso <b>"Lógica de Programação: mergulhe em programação com JavaScript"</b>, oferecido na plataforma da Alura. Confira a <a href="https://cursos.alura.com.br/certificate/abraaosantos-contato/logica-programacao-mergulhe-programacao-javascript">Certificação.</a></li>
+  <li>Este projeto faz parte da formação <b>"Iniciante em Programação T7 - ONE"</b>, mais especificamente dos cursos <b>"Lógica de Programação: mergulhe em programação com JavaScript"</b> e <b>"Lógica de Programação: explore funções e listas"</b>, oferecido na plataforma da Alura. Confira a <a href="https://cursos.alura.com.br/certificate/abraaosantos-contato/logica-programacao-mergulhe-programacao-javascript">Certificação.</a></li>
   <li>O projeto consiste em um jogo de adivinhação de números aleatórios. Se você acertar, vence; caso contrário, perde. Utilizei as principais tecnologias do mercado: JavaScript e React.js para a lógica e reutilização de componentes, além do TailwindCSS para a estilização.</li>
 </ul>
 </div>
