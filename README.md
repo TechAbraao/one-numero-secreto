@@ -1,6 +1,8 @@
 <h1 align="center">Oracle Next Education | Acerte o Número Secreto</h1>
 <div align="center">
+  <br>
   <img src="https://compliancesolucoes.com.br/wp-content/uploads/2022/11/ONE_logo_rgb.png" alt="Logo ampliada" width="350">
+  <br>
 </div>
 <div>
   <h2>Informações</h2>
