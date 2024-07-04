@@ -1,5 +1,4 @@
 import React from "react";
-import ImagemVenceu from "../../assets/personagens-vencedores.png";
 import { useState } from "react";
 
 function ModalGanhou({
