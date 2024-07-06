@@ -53,7 +53,7 @@ export default function Home() {
                </h1>
                <p className="text-center w-3/4 text-xl">
                   {iniciar == false
-                     ? "Terão disponíveis 75 números e, de forma aleatória, um dos números é o correto. Acerte o número correto para vencer o jogo. Você terá 20 tentativas."
+                     ? "Você terá à sua disposição 75 números, e um deles é o número correto escolhido aleatoriamente. Para vencer o jogo, você precisa acertar o número correto dentro de 20 tentativas. Boa sorte!"
                      : ""}
                </p>
                <button
