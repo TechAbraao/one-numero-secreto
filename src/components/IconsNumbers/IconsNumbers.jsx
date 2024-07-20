@@ -17,7 +17,7 @@ function IconsNumbers({ numeroSelecionado, numeroAleatorio }) {
    });
    return (
       <div
-         className={`bg-stone-300 w-14 h-14 flex justify-center items-center rounded m-0.5 hover:bg-zinc-700 hover:text-white
+         className={`bg-stone-300 w-14 h-14 flex justify-center items-center rounded m-0.5 hover:bg-zinc-600 hover:text-green-300
        `}
       >
          <p className="text-3xl hover:duration-500">{numeroSelecionado}</p>
