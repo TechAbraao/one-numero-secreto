@@ -11,6 +11,23 @@ export default {
             corTexto: "#DB2423",
             corTextoHover: "#C60506",
          },
+         screens: {
+            s430: "430px", //
+            s530: "530px", //
+            s630: "630px", //
+            s730: "",
+            s830: "830px", //
+            s930: "930px",
+            s1030: "1030px",
+         },
+         spacing: {
+            106: "29rem",
+            116: "39rem",
+            126: "49rem",
+         },
+         fontSize: {
+            2: "2rem",
+         },
       },
    },
    plugins: [],

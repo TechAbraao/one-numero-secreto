@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState } from "react";
 import IconsNumbers from "../../components/IconsNumbers/IconsNumbers";
 import ModalPerdeu from "../../components/ModalPerdeu/ModalPerdeu";
@@ -86,21 +86,21 @@ export default function Home() {
    return (
       <>
          <section className="w-full h-screen flex justify-center items-center bg-gradient-to-r from-green-500 to-emerald-500">
-            <div className="h-2/3 w-1/2 flex-col flex items-center justify-center rounded-3xl shadow-xl bg-corCard border-4 border-solid border-white-100">
-               <h1 className="mb-5 text-4xl text-green-500 font-semibold">
+            <div className="h-2/3 w-1/2 flex-col flex items-center justify-center rounded-3xl shadow-xl bg-corCard border-4 border-solid border-white-100 s430:w-96 s530:w-106 s830:w-116 s1030:w-126">
+               <h1 className="mb-5 text-green-500 font-semibold text-center s430:text-2xl s630:text-3xl s930:text-2 s1030:text-4xl">
                   {iniciar == false ? "Número da Sorte" : `${intervaloMsg}`}
                </h1>
-               <p className="text-center w-3/4 text-xl">
+               <p className="text-center w-3/4 s1020:text-xl s430:text-xl s1030:text-2xl">
                   {iniciar == false
                      ? `Você terá à sua disposição 75 números, e um deles é o número correto escolhido aleatoriamente. Para vencer o jogo, você precisa acertar o número correto dentro de ${dificuldade} tentativas. Boa sorte!`
                      : ""}
                </p>
                {iniciar == false ? (
-                  <div className="flex gap-12 mt-7">
+                  <div className="flex gap-12 mt-7 s430:gap-5 s1030:gap-10">
                      {dataDificuldade.map((nivelDificuldade) => (
                         // eslint-disable-next-line react/jsx-key
                         <button
-                           className="bg-green-500 rounded-md w-32 h-8 hover:bg-green-600 text-white text-lg"
+                           className="bg-green-500 rounded-md h-8 hover:bg-green-600 text-white text-lg s430:w-20 s430:text-base s530:w-28 s530:text-lg s1030:w-32"
                            onClick={() =>
                               selecionaDificuldade(nivelDificuldade.index)
                            }
@@ -113,7 +113,7 @@ export default function Home() {
                   ""
                )}
                <button
-                  className="bg-green-500 rounded-md w-32 h-8 m-5 hover:bg-green-600 text-white text-lg"
+                  className="bg-green-500 rounded-md h-8 m-5 hover:bg-green-600 text-white text-center s430:w-20 s430:text-base s530:w-28 s530:text-lg s1030:w-32"
                   onClick={() => {
                      setIniciar(!iniciar); // Inicializa a partida.
                      geradorNumeroAleatorio(); // Invoca a função de inicialização com a lógica de execução.
@@ -156,8 +156,8 @@ export default function Home() {
                               )}
                            </ul>
                         </motion.div>
-                        <div className="bg-green-500 w-2/3 h-14 mt-7 flex justify-center items-center rounded-lg ">
-                           <h1 className="text-2xl text-white font-bold">
+                        <div className="bg-green-500 w-2/3 h-14 mt-7 flex justify-center items-center rounded-lg">
+                           <h1 className="text-white text-center font-semibold s430:text-lg">
                               {descQntd}
                            </h1>
                         </div>
