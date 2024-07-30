@@ -12,6 +12,7 @@ export default {
             corTextoHover: "#C60506",
          },
          screens: {
+            s380: "380px",
             s430: "430px", //
             s530: "530px", //
             s630: "630px", //
@@ -21,6 +22,7 @@ export default {
             s1030: "1030px",
          },
          spacing: {
+            82: "21rem",
             106: "29rem",
             116: "39rem",
             126: "49rem",
