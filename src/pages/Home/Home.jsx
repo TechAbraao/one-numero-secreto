@@ -88,7 +88,7 @@ export default function Home() {
       <>
          <section className="w-full h-screen flex justify-center items-center bg-gradient-to-r from-green-500 to-emerald-500">
             <div className="h-2/3 flex-col flex items-center justify-center shadow-xl bg-corCard border-4 border-solid border-white-100 s380:w-82 s430:w-96 s530:w-106 s830:w-116 s1030:w-1/2">
-               <h1 className="mb-5 text-green-500 font-semibold text-center s380:text-xl s430:text-2xl s630:text-3xl s930:text-2 s1030:text-4xl">
+               <h1 className="mb-5 text-green-300 font-semibold text-center s380:text-xl s430:text-2xl s630:text-3xl s930:text-2 s1030:text-4xl">
                   {iniciar == false ? "Número da Sorte" : `${intervaloMsg}`}
                </h1>
                <p className="text-center w-3/4 s380:text-lg s1020:text-xl s430:text-xl s1030:text-2xl">
