@@ -25,6 +25,7 @@ export default {
             82: "21rem",
             106: "29rem",
             116: "39rem",
+            115: "35rem",
             126: "49rem",
          },
          fontSize: {
