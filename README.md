@@ -11,7 +11,7 @@
   <br>
   <li>Este projeto faz parte da formação <b>"Iniciante em Programação T7 - ONE"</b>, mais especificamente dos cursos <a href="https://cursos.alura.com.br/certificate/abraaosantos-contato/logica-programacao-mergulhe-programacao-javascript">Lógica de Programação: mergulhe em programação com JavaScript</a> e <a href="https://cursos.alura.com.br/certificate/abraaosantos-contato/logica-programacao-funcoes-listas">Lógica de Programação: explore funções e listas</a>, oferecidos na plataforma da Alura.</li>
   <br>
-  <li>O projeto consiste em um jogo de adivinhação de números aleatórios. Se você acertar, vence; caso contrário, perde. Utilizei as principais tecnologias do mercado: JavaScript e React.js para a lógica e reutilização de componentes, além do TailwindCSS para a estilização.</li>
+  <li>O projeto consiste em um jogo de adivinhação de números aleatórios. Se você acertar, vence; caso contrário, perde. Utilizei as principais tecnologias do mercado: JavaScript e React para a lógica e reutilização de componentes, além do TailwindCSS para a estilização.</li>
 </ul>
 </div>
 <div>
